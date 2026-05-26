@@ -392,6 +392,24 @@
   }
   .share-emphasis p { margin: 0; font-size: 0.98rem; color: var(--slate); }
 
+  /* ── STORY EXPAND/COLLAPSE ── */
+  .story-card-preview { margin: 0; }
+  .story-card-full {
+    display: none;
+    margin: 0;
+  }
+  .story-card-full.open { display: block; }
+  .story-read-more {
+    background: none; border: none; cursor: pointer;
+    color: var(--teal); font-family: 'Source Sans 3', sans-serif;
+    font-size: 0.88rem; font-weight: 600; padding: 10px 0 0;
+    display: inline-flex; align-items: center; gap: 5px;
+    transition: color 0.2s; letter-spacing: 0.02em;
+  }
+  .story-read-more:hover { color: var(--teal-dark); }
+  .story-read-more svg { transition: transform 0.25s; }
+  .story-read-more.open svg { transform: rotate(180deg); }
+
   /* ── SUCCESS MSG ── */
   .success-msg {
     display: none; background: rgba(29,158,117,0.1);
@@ -784,15 +802,43 @@
       <div class="stories-layout" style="display: grid; grid-template-columns: 2fr 1fr; gap: 40px; align-items: start;">
 
         <div>
-          <!-- Placeholder card — replace content as real stories come in -->
-          <div class="story-card">
+
+          <!-- Story 1: Anonymous (2022) -->
+          <div class="story-card" id="story-1">
             <div class="story-big-quote">"</div>
             <div class="story-card-meta">
               <span class="story-card-name">Anonymous</span>
-              <span class="anon-badge">Anonymous</span>
-              <span class="story-card-date">Awaiting first submissions</span>
+              <span class="story-card-date">2022</span>
             </div>
-            <p class="story-card-text">Stories will appear here as families come forward to share their experiences of RCHT maternity care in Cornwall. Each story will be published exactly as the family wishes — with their name, or completely anonymously. We will never publish anything without explicit permission.</p>
+
+            <!-- Preview: first ~2 sentences shown before expand -->
+            <p class="story-card-text story-card-preview">Time to speak up and out. I miscarried during Covid and was alone when they told me the baby had passed. Fair enough — rules were rules — but nothing ever prepares you for being alone when they tell you "your womb is empty."</p>
+
+            <!-- Full story — hidden until expanded -->
+            <div class="story-card-full" id="story-1-full">
+              <p class="story-card-text" style="margin-top: 16px;">I then never got my birth plan due to my weight. I so wanted a water birth. I spoke with other plus-size mums who said there's no actual evidence that suggests weight hindered anything. Their reasoning: "What if something goes wrong — you'd be too heavy to get out the pool." (My partner at the time said he would drag me out if needed.)</p>
+
+              <p class="story-card-text" style="margin-top: 16px;">I then gave birth towards the end of Covid, so it was still only one household member allowed. My baby's dad didn't come back, so I was alone for the three days I was in. I made friends with the tea lady, who sat by my bed for the majority of her shift, and then with the ward sister, who also sat with me so I wasn't alone. But I so would have loved my mum there.</p>
+
+              <p class="story-card-text" style="margin-top: 16px;">Then they missed her hip dysplasia on her checks, and her tongue tie — it wasn't found until she was a lot older. I was told "she's just little and needs to adjust to the world." She used to hold her legs in one position and scream and scream and cry when her nappy was taken off. We later found out her nappy was holding her legs in a comfortable position. When the lady who scanned her hips looked, she said — and I quote, because it has stayed with me forever — "That poor little mite, no wonder she's always crying: she has no socket for the hip to sit in."</p>
+
+              <p class="story-card-text" style="margin-top: 16px;">Her tongue tie was found much later — past the date that the NHS would treat it for free. So I had to go private. Luckily a breastfeeding clinic had some funding and they paid for her to have it cut. I hold that one personally, as it really impacted our breastfeeding journey and we were recommended to switch to bottle. (I know fed is best — but the choice was taken from us, not made by us.)</p>
+
+              <p class="story-card-text" style="margin-top: 16px;">A student nurse forgot to sign my discharge papers, so they sent me home without anyone knowing. My stitches became infected, my breasts felt like they were going to fall off, my daughter screamed and screamed, and I thought I was going mad — and yet we didn't see a midwife at home until day four. My mum asked why I hadn't been seen and I thought it was normal for them not to visit straight away. But they didn't know I'd left the hospital. When I questioned it, it was brushed under the carpet: "Oh, she was in training and mistakes happen." Yes. To me they did.</p>
+
+              <p class="story-card-text" style="margin-top: 16px;">So I am fully behind you on this one. Thanks for listening — sorry it was a long one.</p>
+            </div>
+
+            <button
+              class="story-read-more"
+              id="story-1-btn"
+              onclick="toggleStory('story-1')"
+              aria-expanded="false"
+              aria-controls="story-1-full"
+            >
+              Read full story
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
           </div>
 
           <div style="padding: 22px 28px; background: var(--white); border: 1px solid var(--border); border-left: 4px solid var(--teal); border-radius: 0 8px 8px 0; margin-top: 12px;">
@@ -1063,6 +1109,17 @@
     // Otherwise let Formspree handle it — show message after redirect
     document.getElementById('success-msg').style.display = 'block';
     return true;
+  }
+
+  function toggleStory(id) {
+    const full = document.getElementById(id + '-full');
+    const btn = document.getElementById(id + '-btn');
+    const isOpen = full.classList.toggle('open');
+    btn.classList.toggle('open', isOpen);
+    btn.setAttribute('aria-expanded', isOpen);
+    btn.innerHTML = isOpen
+      ? 'Show less <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>'
+      : 'Read full story <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>';
   }
 
   showPage('home');
