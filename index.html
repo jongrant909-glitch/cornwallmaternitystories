@@ -484,6 +484,7 @@
     .stories-layout { grid-template-columns: 1fr !important; }
     .stories-sidebar { display: none; }
     .national-grid { grid-template-columns: 1fr !important; }
+    .data-stat-grid { grid-template-columns: 1fr !important; }
   }
   @media (max-width: 480px) {
     .hero-buttons, .cta-buttons { flex-direction: column; }
@@ -512,6 +513,7 @@
       <li><a href="#" onclick="showPage('home')" data-page="home">Home</a></li>
       <li><a href="#" onclick="showPage('story')" data-page="story">Our Story</a></li>
       <li><a href="#" onclick="showPage('findings')" data-page="findings">Ombudsman Findings</a></li>
+      <li><a href="#" onclick="showPage('data')" data-page="data">What the Data Shows</a></li>
       <li><a href="#" onclick="showPage('stories')" data-page="stories">Your Stories</a></li>
       <li><a href="#" onclick="showPage('calling')" data-page="calling">What We're Calling For</a></li>
       <li><a href="#" onclick="showPage('contact')" data-page="contact">Contact &amp; Share</a></li>
@@ -788,9 +790,159 @@
 </div><!-- /findings -->
 
 
-<!-- ═══════════════════════════════════════════
+<!-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550
+     WHAT THE DATA SHOWS PAGE
+\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550 -->
+<div class="page" id="page-data">
+
+  <section style="background: var(--slate); padding: 64px 24px 56px;">
+    <div class="section-inner">
+      <div class="section-label" style="color: var(--teal);">Freedom of Information</div>
+      <h2 style="color: white;">What the Data Shows</h2>
+      <p style="color: rgba(255,255,255,0.65); font-size: 1.05rem; max-width: 680px; margin: 0;">NHS maternity care failures rarely reach the scrutiny they deserve. The data we have gathered through Freedom of Information requests tells a story of rising complaints, low escalation, and almost no independent accountability.</p>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-narrow">
+
+      <!-- RCHT complaints data -->
+      <div class="section-label">Royal Cornwall Hospital</div>
+      <h2>A decade of rising complaints</h2>
+      <p class="lead">Between 2015 and 2025, Royal Cornwall Hospitals NHS Trust received 228 formal complaints relating to maternity services, community midwifery, and obstetrics and gynaecology. The Trust holds no maternity-only category in its complaints system, so this is the closest available breakdown.</p>
+      <p>The trend is clear. In 2015, 15 complaints were recorded. By 2025, that figure had risen to 40 &mdash; nearly three times as many in a single year. The sharpest increases have come in the last three years.</p>
+
+      <!-- Complaints table -->
+      <div style="margin: 36px 0; background: var(--white); border: 1px solid var(--border); border-radius: 8px; overflow: hidden;">
+        <div style="background: var(--slate); padding: 16px 28px;">
+          <p style="margin: 0; color: white; font-family: 'Playfair Display', serif; font-size: 1rem; font-weight: 700;">Formal complaints received by RCHT — maternity, community midwifery and obstetrics &amp; gynaecology</p>
+        </div>
+        <table style="width: 100%; border-collapse: collapse;">
+          <thead>
+            <tr style="background: rgba(27,58,92,0.05); border-bottom: 2px solid var(--border);">
+              <th style="padding: 12px 28px; text-align: left; font-size: 0.82rem; font-weight: 600; color: var(--slate); letter-spacing: 0.06em; text-transform: uppercase;">Year</th>
+              <th style="padding: 12px 28px; text-align: left; font-size: 0.82rem; font-weight: 600; color: var(--slate); letter-spacing: 0.06em; text-transform: uppercase;">Complaints recorded</th>
+              <th style="padding: 12px 28px; text-align: left; font-size: 0.82rem; font-weight: 600; color: var(--slate); letter-spacing: 0.06em; text-transform: uppercase;">Trend</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="border-bottom: 1px solid var(--border);">
+              <td style="padding: 11px 28px; font-size: 0.93rem; color: var(--muted);">2015</td>
+              <td style="padding: 11px 28px; font-size: 0.93rem; font-weight: 600; color: var(--slate);">15</td>
+              <td style="padding: 11px 28px;"><div style="background: var(--teal); opacity: 0.35; height: 8px; border-radius: 4px; width: 37.5%;"></div></td>
+            </tr>
+            <tr style="border-bottom: 1px solid var(--border); background: rgba(248,247,244,0.5);">
+              <td style="padding: 11px 28px; font-size: 0.93rem; color: var(--muted);">2016</td>
+              <td style="padding: 11px 28px; font-size: 0.93rem; font-weight: 600; color: var(--slate);">9</td>
+              <td style="padding: 11px 28px;"><div style="background: var(--teal); opacity: 0.35; height: 8px; border-radius: 4px; width: 22.5%;"></div></td>
+            </tr>
+            <tr style="border-bottom: 1px solid var(--border);">
+              <td style="padding: 11px 28px; font-size: 0.93rem; color: var(--muted);">2017</td>
+              <td style="padding: 11px 28px; font-size: 0.93rem; font-weight: 600; color: var(--slate);">14</td>
+              <td style="padding: 11px 28px;"><div style="background: var(--teal); opacity: 0.35; height: 8px; border-radius: 4px; width: 35%;"></div></td>
+            </tr>
+            <tr style="border-bottom: 1px solid var(--border); background: rgba(248,247,244,0.5);">
+              <td style="padding: 11px 28px; font-size: 0.93rem; color: var(--muted);">2018</td>
+              <td style="padding: 11px 28px; font-size: 0.93rem; font-weight: 600; color: var(--slate);">15</td>
+              <td style="padding: 11px 28px;"><div style="background: var(--teal); opacity: 0.35; height: 8px; border-radius: 4px; width: 37.5%;"></div></td>
+            </tr>
+            <tr style="border-bottom: 1px solid var(--border);">
+              <td style="padding: 11px 28px; font-size: 0.93rem; color: var(--muted);">2019</td>
+              <td style="padding: 11px 28px; font-size: 0.93rem; font-weight: 600; color: var(--slate);">18</td>
+              <td style="padding: 11px 28px;"><div style="background: var(--teal); opacity: 0.35; height: 8px; border-radius: 4px; width: 45%;"></div></td>
+            </tr>
+            <tr style="border-bottom: 1px solid var(--border); background: rgba(248,247,244,0.5);">
+              <td style="padding: 11px 28px; font-size: 0.93rem; color: var(--muted);">2020</td>
+              <td style="padding: 11px 28px; font-size: 0.93rem; font-weight: 600; color: var(--slate);">22</td>
+              <td style="padding: 11px 28px;"><div style="background: var(--teal); opacity: 0.35; height: 8px; border-radius: 4px; width: 55%;"></div></td>
+            </tr>
+            <tr style="border-bottom: 1px solid var(--border);">
+              <td style="padding: 11px 28px; font-size: 0.93rem; color: var(--muted);">2021</td>
+              <td style="padding: 11px 28px; font-size: 0.93rem; font-weight: 600; color: var(--slate);">21</td>
+              <td style="padding: 11px 28px;"><div style="background: var(--teal); opacity: 0.35; height: 8px; border-radius: 4px; width: 52.5%;"></div></td>
+            </tr>
+            <tr style="border-bottom: 1px solid var(--border); background: rgba(248,247,244,0.5);">
+              <td style="padding: 11px 28px; font-size: 0.93rem; color: var(--muted);">2022</td>
+              <td style="padding: 11px 28px; font-size: 0.93rem; font-weight: 600; color: var(--slate);">17</td>
+              <td style="padding: 11px 28px;"><div style="background: var(--teal); opacity: 0.35; height: 8px; border-radius: 4px; width: 42.5%;"></div></td>
+            </tr>
+            <tr style="border-bottom: 1px solid var(--border);">
+              <td style="padding: 11px 28px; font-size: 0.93rem; color: var(--muted);">2023</td>
+              <td style="padding: 11px 28px; font-size: 0.93rem; font-weight: 600; color: var(--slate);">25</td>
+              <td style="padding: 11px 28px;"><div style="background: var(--teal); opacity: 0.55; height: 8px; border-radius: 4px; width: 62.5%;"></div></td>
+            </tr>
+            <tr style="border-bottom: 1px solid var(--border); background: rgba(248,247,244,0.5);">
+              <td style="padding: 11px 28px; font-size: 0.93rem; color: var(--muted);">2024</td>
+              <td style="padding: 11px 28px; font-size: 0.93rem; font-weight: 600; color: var(--slate);">32</td>
+              <td style="padding: 11px 28px;"><div style="background: var(--teal); opacity: 0.75; height: 8px; border-radius: 4px; width: 80%;"></div></td>
+            </tr>
+            <tr style="background: rgba(29,158,117,0.06);">
+              <td style="padding: 11px 28px; font-size: 0.93rem; color: var(--muted);">2025</td>
+              <td style="padding: 11px 28px; font-size: 0.93rem; font-weight: 700; color: var(--teal-dark);">40</td>
+              <td style="padding: 11px 28px;"><div style="background: var(--teal); height: 8px; border-radius: 4px; width: 100%;"></div></td>
+            </tr>
+          </tbody>
+        </table>
+        <div style="padding: 12px 28px; border-top: 1px solid var(--border);">
+          <p style="margin: 0; font-size: 0.75rem; color: rgba(95,94,90,0.6); font-style: italic;">Source: Royal Cornwall Hospitals NHS Trust, response to Freedom of Information request ref 33137, 23 June 2026.</p>
+        </div>
+      </div>
+
+      <!-- Escalation stats -->
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 40px 0;" class="data-stat-grid">
+        <div style="background: var(--white); border: 1px solid var(--border); border-top: 3px solid var(--slate); border-radius: 4px; padding: 24px 28px;">
+          <div style="font-family: 'Playfair Display', serif; font-size: 2.6rem; font-weight: 700; color: var(--slate); line-height: 1; margin-bottom: 10px;">2</div>
+          <div style="font-size: 0.9rem; color: var(--muted); line-height: 1.5;">of 228 complaints were ever escalated to the Parliamentary &amp; Health Service Ombudsman</div>
+        </div>
+        <div style="background: var(--white); border: 1px solid var(--border); border-top: 3px solid var(--teal); border-radius: 4px; padding: 24px 28px;">
+          <div style="font-family: 'Playfair Display', serif; font-size: 2.6rem; font-weight: 700; color: var(--teal-dark); line-height: 1; margin-bottom: 10px;">1</div>
+          <div style="font-size: 0.9rem; color: var(--muted); line-height: 1.5;">has been partly upheld by the Ombudsman. The second complaint is currently under investigation. No RCHT complaint has ever been fully upheld.</div>
+        </div>
+      </div>
+
+      <p>That partial uphold is Sian&rsquo;s case &mdash; the case that led to this campaign, in which five out of seven complaints were formally upheld against the Trust. The second complaint escalated to the Ombudsman is currently under investigation.</p>
+
+      <p style="font-size: 0.82rem; color: rgba(95,94,90,0.6); font-style: italic;">Source: Royal Cornwall Hospitals NHS Trust, response to Freedom of Information request ref 33137, 23 June 2026.</p>
+
+      <hr class="divider" style="margin: 48px 0;">
+
+      <!-- PHSO section -->
+      <div class="section-label">Parliamentary &amp; Health Service Ombudsman</div>
+      <h2>What the national data shows</h2>
+      <p class="lead">We also submitted a Freedom of Information request directly to the PHSO. The picture it reveals is striking.</p>
+
+      <p>In the last five years, only <strong>2 cases</strong> relating to Royal Cornwall Hospitals NHS Trust reached investigation stage where the complaint involved pregnancy and childbirth.</p>
+
+      <p>One of those was closed because the family was directed to pursue a legal remedy instead. The second is Sian&rsquo;s case &mdash; published on the PHSO website, and partly upheld.</p>
+
+      <div style="margin: 36px 0; background: var(--white); border: 1px solid var(--border); border-left: 4px solid var(--teal); border-radius: 0 8px 8px 0; padding: 24px 28px;">
+        <p style="margin: 0 0 10px; font-size: 0.82rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; color: var(--slate);">An important limitation in the data</p>
+        <p style="margin: 0; font-size: 0.94rem; color: var(--muted); line-height: 1.65;">The PHSO does not categorise complaints as maternity-related at the point they are received &mdash; that categorisation only happens if a case proceeds to full investigation. This means there is no way to know, from publicly available data, how many families have contacted the Ombudsman about RCHT maternity care and been turned away before investigation even began.</p>
+      </div>
+
+      <p style="font-size: 0.82rem; color: rgba(95,94,90,0.6); font-style: italic;">Source: Parliamentary and Health Service Ombudsman, response to Freedom of Information request, June 2026.</p>
+
+      <hr class="divider" style="margin: 48px 0;">
+
+      <!-- What this means -->
+      <h2>What this means</h2>
+      <p>Rising complaints. Near-total local resolution with no independent scrutiny. Only two cases in five years reaching the Ombudsman &mdash; one resulting in findings against the Trust, and one still under investigation.</p>
+      <p>This is not a picture of a system working as it should. It is a picture of complaints being absorbed quietly, with very little external accountability. We believe families deserve better than that &mdash; and we are continuing to pursue further data through the FOI process.</p>
+
+      <div style="margin-top: 32px; padding: 24px 28px; background: rgba(27,58,92,0.05); border: 1px solid var(--border); border-radius: 8px;">
+        <p style="margin: 0 0 8px; font-size: 0.82rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; color: var(--slate);">Ongoing FOI request</p>
+        <p style="margin: 0; font-size: 0.93rem; color: var(--muted); line-height: 1.65;">We have requested additional information from RCHT about specific standards breaches and external reviews of its maternity services. That request is currently under internal review.</p>
+      </div>
+
+    </div>
+  </section>
+
+</div><!-- /data -->
+
+
+<!-- \u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550
      STORIES PAGE
-═══════════════════════════════════════════ -->
+\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550\u2550 -->
 <div class="page" id="page-stories">
 
   <section style="background: var(--slate); padding: 64px 24px 56px;">
@@ -1428,6 +1580,7 @@
       <li><a onclick="showPage('home')">Home</a></li>
       <li><a onclick="showPage('story')">Our Story</a></li>
       <li><a onclick="showPage('findings')">Ombudsman Findings</a></li>
+      <li><a onclick="showPage('data')">What the Data Shows</a></li>
       <li><a onclick="showPage('stories')">Your Stories</a></li>
       <li><a onclick="showPage('calling')">What We're Calling For</a></li>
       <li><a onclick="showPage('contact')">Contact &amp; Share</a></li>
