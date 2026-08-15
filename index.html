@@ -360,6 +360,25 @@
     position: absolute; top: 24px; right: 24px;
   }
 
+  /* ── QUOTE LIST (How It Made Us Feel) ── */
+  .quote-list { width: 100%; }
+  .quote-item {
+    padding: 28px 0 28px 24px;
+    border-left: 3px solid var(--teal);
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 4px;
+  }
+  .quote-item:last-child { border-bottom: none; }
+  .quote-item-text {
+    font-family: 'Source Sans 3', sans-serif;
+    font-weight: 400; font-size: 1.05rem; color: var(--text);
+    line-height: 1.75; margin: 0 0 14px;
+  }
+  .quote-item-meta {
+    font-size: 0.78rem; color: var(--muted);
+    letter-spacing: 0.04em; text-transform: uppercase; font-weight: 600;
+  }
+
   /* ── FORMS ── */
   .contact-form {
     background: var(--white); border: 1px solid var(--border);
@@ -514,6 +533,7 @@
       <li><a href="#" onclick="showPage('findings')" data-page="findings">Ombudsman Findings</a></li>
       <li><a href="#" onclick="showPage('data')" data-page="data">What the Data Shows</a></li>
       <li><a href="#" onclick="showPage('stories')" data-page="stories">Your Stories</a></li>
+      <li><a href="#" onclick="showPage('feelings')" data-page="feelings">How It Made Us Feel</a></li>
       <li><a href="#" onclick="showPage('calling')" data-page="calling">What We're Calling For</a></li>
       <li><a href="#" onclick="showPage('contact')" data-page="contact">Contact &amp; Share</a></li>
       <li>
@@ -1735,6 +1755,43 @@
 
 
 <!-- ═══════════════════════════════════════════
+     HOW IT MADE US FEEL PAGE
+═══════════════════════════════════════════ -->
+<div class="page" id="page-feelings">
+
+  <section style="background: var(--slate); padding: 64px 24px 56px;">
+    <div class="section-inner">
+      <div class="section-label" style="color: var(--teal);">In Their Own Words</div>
+      <h2 style="color: white;">How It Made Us Feel</h2>
+      <p style="color: rgba(255,255,255,0.65); font-size: 1.05rem; max-width: 680px; margin: 0 0 28px;">We asked families a simple question: how did your birth make you feel, and have those feelings stayed with you? These are their answers, in their own words.</p>
+      <a href="https://forms.gle/cR61BArxj6ncPvX7A" target="_blank" rel="noopener noreferrer" class="btn btn-teal">Answer the question yourself</a>
+    </div>
+  </section>
+
+  <section>
+    <div class="section-inner">
+
+      <div class="quote-list">
+
+        <!-- Feeling 1: Anonymous (2025) -->
+        <div class="quote-item" id="feeling-1">
+          <p class="quote-item-text">"Scared and stressed. The two midwives I had were incredible. Once I had given birth there was a staff changeover, and that's when it went downhill. I had a complication with my placenta not coming. Once that was sorted I was left covered in blood, with no help, and told I needed to get ready to go to the ward. No shower or help was given. I was left all alone with my baby and partner. I was so upset and didn't know what I was doing."</p>
+          <div class="quote-item-meta">Anonymous &middot; 2025</div>
+        </div>
+
+      </div>
+
+      <div style="padding: 22px 28px; background: var(--white); border: 1px solid var(--border); border-left: 4px solid var(--teal); border-radius: 0 8px 8px 0; margin: 28px auto 0; max-width: 760px;">
+        <p style="margin: 0; font-size: 0.94rem; color: var(--muted); text-align: center;">Want to add your own answer? <a href="https://forms.gle/cR61BArxj6ncPvX7A" target="_blank" rel="noopener noreferrer" style="color: var(--teal); text-decoration: none; border-bottom: 1px solid var(--teal); font-weight: 500;">Fill in our short form</a> &mdash; a few sentences is enough, and you can stay anonymous.</p>
+      </div>
+
+    </div>
+  </section>
+
+</div><!-- /feelings -->
+
+
+<!-- ═══════════════════════════════════════════
      WHAT WE'RE CALLING FOR
 ═══════════════════════════════════════════ -->
 <div class="page" id="page-calling">
@@ -1920,6 +1977,7 @@
       <li><a onclick="showPage('findings')">Ombudsman Findings</a></li>
       <li><a onclick="showPage('data')">What the Data Shows</a></li>
       <li><a onclick="showPage('stories')">Your Stories</a></li>
+      <li><a onclick="showPage('feelings')">How It Made Us Feel</a></li>
       <li><a onclick="showPage('calling')">What We're Calling For</a></li>
       <li><a onclick="showPage('contact')">Contact &amp; Share</a></li>
     </ul>
